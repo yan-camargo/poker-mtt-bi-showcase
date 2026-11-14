@@ -14,7 +14,7 @@
 
 ## Why it exists
 
-I play online tournaments (MTTs) every day, on several accounts, as part of a team. The team has its own split rules: makeup, deal, rakeback and a weekly goal. I used to keep it all in a spreadsheet, and checking that every payment matched took hours.
+I play online tournaments (MTTs) every day, on several accounts, as part of a team. The team has its own split rules: makeup (accumulated losses that must be won back before any profit is split), the deal (my share of the profit), rakeback (part of the fees paid that comes back) and a weekly goal. I used to keep it all in a spreadsheet, and checking that every payment matched took hours.
 
 Now I mark the day's records and the app does the rest. It shows how I'm doing, works out what the team owes me and tells me when something doesn't add up.
 
@@ -54,6 +54,8 @@ A chat inside the app, backed by a language model (Qwen, `qwen3.5:4b`) running o
 
 The model only understands the request. The app itself does the math, so the assistant shows the same numbers as every other screen.
 
+I chose the model by measuring. I tested 7 local models on 22 real requests. `qwen3.5:4b` got 19 right, with no invented filters and no attempts to save on its own, at 5.4 s per answer. `qwen3:8b`, twice the size, also got 19 right, but invented 12 filters nobody asked for and took 50 s. Three of the six models that ran tried to write to the database without confirmation, which is why only the click saves. The test also showed that much of the error was in the request format, not the model: once it sent just "last month" and the app worked out the dates, correct answers went from 13 to 18.
+
 <img src="docs/img/assistente.png" alt="Assistant answering a question and proposing a withdrawal" width="900">
 
 ## Schedule
@@ -64,7 +66,7 @@ The team's weekly tournament schedule, pulled from the team's spreadsheet.
 
 ## Built with
 
-I built it by orchestrating AI agents (Claude Code and Gemini), *vibe coding* style: I define what the app does and its rules, the agents write the code, and I check and test it in daily use.
+I built it by orchestrating AI agents (Claude Code and Gemini), *vibe coding* style. I write the rules and acceptance criteria for each feature and split the work into small tasks. The agents write the code, another agent reviews each delivery without having seen how it was made, and nothing gets in without passing more than 1,800 automated tests. Then I check it in daily use.
 
 Under the hood: C# and .NET 10 on the server, React and TypeScript for the interface, SQLite as the database and Ollama for the local model. It runs entirely on my computer, with light and dark themes.
 

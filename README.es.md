@@ -14,7 +14,7 @@
 
 ## Por qué existe
 
-Juego torneos online (MTT) todos los días, en varias cuentas, dentro de un equipo. El equipo tiene reglas propias de reparto: makeup, deal, rakeback y meta semanal. Antes lo llevaba todo en una hoja de cálculo, y revisar que cada pago coincidiera me llevaba horas.
+Juego torneos online (MTT) todos los días, en varias cuentas, dentro de un equipo. El equipo tiene reglas propias de reparto: el makeup (pérdida acumulada que hay que recuperar antes de repartir ganancias), el deal (la parte de la ganancia que me queda), el rakeback (parte de las comisiones pagadas que vuelve) y una meta semanal. Antes lo llevaba todo en una hoja de cálculo, y revisar que cada pago coincidiera me llevaba horas.
 
 Hoy marco los registros del día y la app hace el resto. Muestra cómo voy, calcula lo que el equipo me debe y me avisa cuando algo no cuadra.
 
@@ -54,6 +54,8 @@ Un chat dentro de la app, con un modelo de lenguaje (Qwen, `qwen3.5:4b`) que cor
 
 El modelo solo entiende el pedido. Las cuentas las hace la propia app, así que el asistente muestra los mismos números que las demás pantallas.
 
+Elegí el modelo midiendo. Probé 7 modelos locales con 22 pedidos reales. `qwen3.5:4b` acertó 19, sin inventar filtros y sin intentar guardar por su cuenta, en 5,4 s por respuesta. `qwen3:8b`, del doble de tamaño, también acertó 19, pero inventó 12 filtros que nadie pidió y tardó 50 s. Tres de los seis modelos que corrieron intentaron escribir en la base sin confirmación, y por eso solo el clic guarda. La prueba también mostró que buena parte del error estaba en el formato del pedido, no en el modelo: cuando pasó a enviar solo "mes pasado" y la app a calcular las fechas, los aciertos subieron de 13 a 18.
+
 <img src="docs/img/assistente.png" alt="Asistente respondiendo una pregunta y proponiendo un retiro" width="900">
 
 ## Grilla
@@ -64,7 +66,7 @@ La grilla semanal de torneos del equipo, tomada de su hoja de cálculo.
 
 ## Hecho con
 
-Lo construí orquestando agentes de IA (Claude Code y Gemini), al estilo *vibe coding*: defino lo que hace la app y sus reglas, los agentes escriben el código, y yo lo reviso y pruebo en el uso diario.
+Lo construí orquestando agentes de IA (Claude Code y Gemini), al estilo *vibe coding*. Escribo las reglas y el criterio de aceptación de cada funcionalidad y divido el trabajo en tareas pequeñas. Los agentes escriben el código, otro agente revisa cada entrega sin haber visto cómo se hizo, y nada entra sin pasar más de 1.800 pruebas automatizadas. Después lo compruebo en el uso diario.
 
 Por debajo: C# y .NET 10 en el servidor, React y TypeScript en la interfaz, SQLite como base de datos y Ollama para el modelo local. Corre entero en mi computadora, con tema claro y oscuro.
 
