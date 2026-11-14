@@ -72,4 +72,4 @@ Por baixo: C# e .NET 10 no servidor, React e TypeScript na interface, SQLite com
 
 ---
 
-<sub>Feito por **Yan Camargo** · [LinkedIn](https://www.linkedin.com/in/yan-ca%C3%AA-camargo-38b1002a1/) · © 2026, todos os direitos reservados ([LICENSE](LICENSE))</sub>
+<sub>Feito por **Yan Camargo** · [LinkedIn](https://www.linkedin.com/in/yancaecamargo) · © 2026, todos os direitos reservados ([LICENSE](LICENSE))</sub>

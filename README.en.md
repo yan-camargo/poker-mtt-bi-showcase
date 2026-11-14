@@ -72,4 +72,4 @@ Under the hood: C# and .NET 10 on the server, React and TypeScript for the inter
 
 ---
 
-<sub>Built by **Yan Camargo** · [LinkedIn](https://www.linkedin.com/in/yan-ca%C3%AA-camargo-38b1002a1/) · © 2026, all rights reserved ([LICENSE](LICENSE))</sub>
+<sub>Built by **Yan Camargo** · [LinkedIn](https://www.linkedin.com/in/yancaecamargo) · © 2026, all rights reserved ([LICENSE](LICENSE))</sub>

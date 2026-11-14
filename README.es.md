@@ -72,4 +72,4 @@ Por debajo: C# y .NET 10 en el servidor, React y TypeScript en la interfaz, SQLi
 
 ---
 
-<sub>Hecho por **Yan Camargo** · [LinkedIn](https://www.linkedin.com/in/yan-ca%C3%AA-camargo-38b1002a1/) · © 2026, todos los derechos reservados ([LICENSE](LICENSE))</sub>
+<sub>Hecho por **Yan Camargo** · [LinkedIn](https://www.linkedin.com/in/yancaecamargo) · © 2026, todos los derechos reservados ([LICENSE](LICENSE))</sub>
