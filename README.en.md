@@ -14,7 +14,7 @@
 
 ## Why it exists
 
-I play online tournaments (MTTs) every day, on several accounts, as part of a team. The team has its own split rules: makeup (accumulated losses that must be won back before any profit is split), the deal (my share of the profit), rakeback (part of the fees paid that comes back) and a weekly goal. I used to keep it all in a spreadsheet, and checking that every payment matched took hours.
+I play online tournaments (MTTs) every day as part of a team. The team has its own split rules: makeup (accumulated losses that must be won back before any profit is split), the deal (my share of the profit), rakeback (part of the fees paid that comes back) and a weekly goal. I used to keep it all in a spreadsheet, and checking that every payment matched took hours.
 
 Now I mark the day's records and the app does the rest. It shows how I'm doing, works out what the team owes me and tells me when something doesn't add up.
 

@@ -14,7 +14,7 @@
 
 ## Por que existe
 
-Jogo torneios online (MTT) todos os dias, em várias contas, dentro de um time. O time tem regras próprias de divisão: o makeup (prejuízo acumulado, que precisa ser recuperado antes de dividir lucro), o deal (a parte do lucro que fica comigo), o rakeback (parte das taxas pagas que volta) e uma meta semanal. Eu controlava tudo em planilha, e conferir se cada pagamento batia virou trabalho de horas.
+Jogo torneios online (MTT) todos os dias, dentro de um time. O time tem regras próprias de divisão: o makeup (prejuízo acumulado, que precisa ser recuperado antes de dividir lucro), o deal (a parte do lucro que fica comigo), o rakeback (parte das taxas pagas que volta) e uma meta semanal. Eu controlava tudo em planilha, e conferir se cada pagamento batia virou trabalho de horas.
 
 Hoje eu marco os registros do dia e o app faz o resto. Mostra como estou indo, calcula o que o time me deve e me avisa quando alguma coisa não bate.
 
